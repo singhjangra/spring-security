@@ -13,9 +13,12 @@
 <body>
 
 			Welcome to spring security with custom Login
-			
-		
-			
+			<hr>
+			User:<security:authentication property="principal.username"/>
+		<hr style="border: 1px dashed black;" />
+
+			UserRole:<security:authentication property="principal.authorities"/>
+			  <hr>
 			<form:form action="${pageContext.request.contextPath}/logout"  method="POST">
 				<input type="submit" value="Logout">					
 								
